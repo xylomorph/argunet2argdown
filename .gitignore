@@ -1,8 +1,14 @@
+# Folders to ignore
+/testdata/
+
 # Compiled class file
 *.class
 
 # Log file
 *.log
+*.lck
+*.log.*
+
 
 # BlueJ files
 *.ctxt
