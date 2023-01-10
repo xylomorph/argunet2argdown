@@ -1,6 +1,6 @@
 # argunet2argdown
 
-A simple groovy script to convert Argunet files to Argdown files.
+A simple groovy script to convert [Argunet](http://www.argunet.org/) files to [Argdown](https://argdown.org) files.
 
 ## Usage
 
