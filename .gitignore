@@ -17,7 +17,8 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
+# we actually want to upload the jar files...
+# *.jar
 *.war
 *.nar
 *.ear
