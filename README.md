@@ -1,6 +1,9 @@
 # argunet2argdown
 
-A simple groovy script to convert [Argunet](http://www.argunet.org/) files to [Argdown](https://argdown.org) files.
+A simple rudimentary groovy script to convert [Argunet](http://www.argunet.org/) files to [Argdown](https://argdown.org) files.
+
+*Remark*: Note that this script does (so far) not consider all relevant information and fields. Nodes, sketched relations and edges that rely on defined semantic relations are translated to argdown. However, all other information is ignored (e.g., groups, inference rules, colors, etc.).
+
 
 ## Usage
 
