@@ -34,7 +34,6 @@ if(args == null || args.size() == 0){
 	throw new Exception("You must provide an Argunet file to the groovy script! (Of the form: groovy -cp LIBRARY_PATH PATH_TO_SCRIPT/argunet2argdown.groovy ARGUNET_FILE). ")
 }
 
-//path = "/home/sebastian/eclipse-workspace/argunet2argdown/testdata/argumentkarte-kbe-v01.yap"
 argunetFile = new File(args[0])
 
 HashMap<Long,DataObject> nodeContentMap = null
@@ -87,9 +86,6 @@ if(argunetFile.exists()) {
 			argumentSemantics = (ArgumentSemantics) result.next()
 			supportRelations = argumentSemantics.getSupportRelations()
 			attackRelations = argumentSemantics.getAttackRelations()
-			//Set<Long> allKeys = new HashSet<Long>()
-			//allKeys.addAll(argumentSemantics.supportRelations.keySet())
-			//allKeys.addAll(argumentSemantics.attackRelations.keySet())
 		}
 		else 
 			throw new Exception("Found " + result.size() + " instances of ArgumentSemantics (instead of 1).")
@@ -100,7 +96,6 @@ if(argunetFile.exists()) {
 			propositions = new HashMap<Long, Proposition>()
 			while(result.hasNext()) {
 				prop = (Proposition) result.next()
-				//log.info("Putting " + nodeContent.getUid())
 				propositions.put(prop.getUid(), prop)
 			}
 		}
@@ -123,7 +118,6 @@ if(argunetFile.exists()) {
 			nodeContentMap = new HashMap<Long,DataObject>()
 			while(result.hasNext()) {
 				nodeContent = (DataObject) result.next()
-				//log.info("Putting " + nodeContent.getUid())
 				nodeContentMap.put(nodeContent.getUid(), nodeContent)
 			}
 		}
@@ -167,7 +161,7 @@ if(argunetFile.exists()) {
 			argdownFile.write "===\n"
 			argdownFile << "title: " + graph.getTitle() + "\n"
 			argdownFile << "model:\n"
-    		argdownFile << "    mode: strict\n"
+			argdownFile << "    mode: strict\n"
 			argdownFile << "===\n\n"
 			// looping through Nodes
 			for(Node node: graph.nodes.values()){
