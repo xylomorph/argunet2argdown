@@ -1,5 +1,6 @@
 # Folders to ignore
 /testdata/
+/data/
 
 # Compiled class file
 *.class
